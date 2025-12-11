@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>e4d713b1-dc40-4202-aced-af8234dc6078</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>.</DockerfileContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.23.0" />
+  </ItemGroup>
+
+  <!-- Added packages: authentication, hashing, mapping, validation, swagger, logging, EF Core (SQL Server), specification, Hangfire -->
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="*" />
+    <PackageReference Include="BCrypt.Net-Next" Version="*" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="*" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="*" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="*" />
+    <PackageReference Include="Microsoft.OpenApi" Version="*" />
+    <PackageReference Include="Serilog.AspNetCore" Version="*" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="*" />
+    <PackageReference Include="Serilog.Sinks.File" Version="*" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="*" />
+
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="*" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="*" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="*" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="*" />
+
+    <PackageReference Include="Ardalis.Specification" Version="*" />
+
+    <!-- Hangfire packages -->
+    <PackageReference Include="Hangfire.AspNetCore" Version="*" />
+    <PackageReference Include="Hangfire.SqlServer" Version="*" />
+  </ItemGroup>
+
+</Project>
